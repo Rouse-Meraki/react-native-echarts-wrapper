@@ -1,0 +1,65 @@
+{
+  "name": "react-native-echarts-wrapper",
+  "version": "1.0.0",
+  "description": "Echarts for React Native.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "example": "yarn workspace react-native-echarts-wrapper-example",
+    "typecheck": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rouse-Meraki/react-native-echarts-wrapper.git"
+  },
+  "author": "Didier Gonzalez <alandidiergon@gmail.com> (https://github.com/adidiergg)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rouse-Meraki/react-native-echarts-wrapper/issues"
+  },
+  "homepage": "https://github.com/Rouse-Meraki/react-native-echarts-wrapper#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@react-native/babel-preset": "0.83.0",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^19.1.12",
+    "jest": "^29.7.0",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "typescript": "^5.9.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "workspaces": [
+    "example"
+  ],
+   "keywords": [
+    "chart",
+    "charts",
+    "graph",
+    "data visualization",
+    "bar",
+    "pie",
+    "donut",
+    "scatter",
+    "area",
+    "gauge",
+    "heatmap",
+    "chord",
+    "matrix",
+    "line",
+    "tree",
+    "radar",
+    "react",
+    "react native",
+    "react-native"
+  ]
+}
