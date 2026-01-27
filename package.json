@@ -2,8 +2,8 @@
   "name": "react-native-echarts-wrapper",
   "version": "1.0.0",
   "description": "Echarts for React Native.",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "source": "src/index",
+  "main": "src/index.tsx",
   "files": [
     "src"
   ],
@@ -41,7 +41,7 @@
   "workspaces": [
     "example"
   ],
-   "keywords": [
+  "keywords": [
     "chart",
     "charts",
     "graph",
@@ -49,7 +49,6 @@
     "bar",
     "pie",
     "donut",
-    "scatter",
     "area",
     "gauge",
     "heatmap",
