@@ -4,6 +4,7 @@
     "paths": {
       "react-native-echarts-wrapper": ["./src/index"]
     },
+    "allowJs": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "customConditions": ["react-native-strict-api"],
@@ -24,7 +25,5 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": false,
-    "target": "ESNext",
-    "verbatimModuleSyntax": true
   }
 }

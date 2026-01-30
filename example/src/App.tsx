@@ -1,47 +1,55 @@
-import { Text, View, StyleSheet } from 'react-native';
-import { Echarts } from 'react-native-echarts-wrapper';
+import { useState } from 'react';
+import {  FlatList, Pressable, Text, View, StyleSheet } from 'react-native';
 
+
+import BaseLineChart from './examples/BasicLineChart';
 
 export default function App() {
-  const pieOption = {
-    series: [
-      {
-        name: "Source",
-        type: "pie",
-        legendHoverLink: true,
-        hoverAnimation: true,
-        avoidLabelOverlap: true,
-        startAngle: 180,
-        radius: "55%",
-        center: ["50%", "35%"],
-        data: [
-          { value: 105.2, name: "android" },
-          { value: 310, name: "iOS" },
-          { value: 234, name: "web" },
-        ],
-        label: {
-          normal: {
-            show: true,
-            textStyle: {
-              fontSize: 12,
-              color: "#23273C",
-            },
-          },
-        },
-      },
-    ],
-  };
-  return (
-          <View style={{ height: 300, paddingTop: 25 }}>
-            <Echarts height={250} option={pieOption} />
-          </View>
-  );
+
+  const [Component,setComponent] = useState(null);
+
+  const renderExamples = (examples:any) => {
+    
+    return (
+       <View style={styles.container}>
+        { Component && (
+          <Component />
+        )
+        }
+
+        <FlatList data={examples} 
+          renderItem={(item) => <RenderExample Component={item.item[0]} title={item.item[1]}/>}
+        />
+
+       </View>
+    );
+
+  }
+  
+  const RenderExample = (item : {Component, title:string}) => {
+    return (
+      <Pressable
+        onPress={() => setComponent(item.Component)}
+      >
+        <Text>
+          {item.title}
+        </Text>
+      </Pressable>
+    );
+  }
+
+  // return renderExample([[
+
+  // ]]);
+
+  return renderExamples([[BaseLineChart,'Basic Line Chart']]);
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: 'flex-end',
     alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 32
   },
 });
