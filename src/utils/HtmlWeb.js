@@ -4,7 +4,7 @@
  * 这是 Echarts 容器 HTML 页面，由页面 main 节点挂载 Echarts。
  * 如果有自定义的字体，会在style标签中设置并预加载。
  */
-import echarts from "../lib/echarts.min"; // echarts.min
+import echarts from "../core/echarts.min"; // echarts.min
 const HtmlWeb = function (fontFamiliesObject) {
   return `<!DOCTYPE html>
   <html>
